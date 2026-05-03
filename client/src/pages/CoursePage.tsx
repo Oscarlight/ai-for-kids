@@ -1,6 +1,7 @@
 import { courses } from "@/lib/courseData";
 import { useParams, Link } from "wouter";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -14,6 +15,11 @@ import {
   Terminal,
   Wrench,
   ChevronRight,
+  ChevronDown,
+  XCircle,
+  ShieldAlert,
+  Video,
+  Star,
 } from "lucide-react";
 
 const levelBadgeColors: Record<string, string> = {
@@ -29,6 +35,62 @@ const promptTypeConfig: Record<string, { icon: typeof Zap; label: string; border
   agent: { icon: Wrench, label: "Agentic Command", borderColor: "border-neon-magenta/30", bgColor: "bg-neon-magenta/5", labelColor: "text-neon-magenta" },
   step: { icon: Sparkles, label: "Step", borderColor: "border-neon-amber/30", bgColor: "bg-neon-amber/5", labelColor: "text-neon-amber" },
 };
+
+function ExpandablePrompt({ example, index }: { example: any; index: number }) {
+  const [expanded, setExpanded] = useState(index < 3);
+  const config = promptTypeConfig[example.type];
+  const Icon = config.icon;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 15 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: Math.min(index * 0.06, 0.3) }}
+      className={`rounded-2xl border ${config.borderColor} ${config.bgColor} overflow-hidden`}
+    >
+      <button
+        onClick={() => setExpanded(!expanded)}
+        className="w-full p-4 md:p-6 flex items-center justify-between text-left"
+      >
+        <div className="flex items-center gap-2">
+          <Icon className={`w-4 h-4 ${config.labelColor} shrink-0`} />
+          <span className={`text-xs font-bold uppercase tracking-wider ${config.labelColor}`}>
+            {config.label}
+          </span>
+          <span className="text-xs text-muted-foreground ml-2">— {example.label}</span>
+        </div>
+        <ChevronDown className={`w-4 h-4 text-muted-foreground transition-transform duration-200 shrink-0 ${expanded ? "rotate-180" : ""}`} />
+      </button>
+
+      {expanded && (
+        <div className="px-4 pb-4 md:px-6 md:pb-6">
+          {/* Prompt */}
+          <div className="terminal-block p-4 mb-4">
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-3 h-3 rounded-full bg-red-500/70" />
+              <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
+              <div className="w-3 h-3 rounded-full bg-green-500/70" />
+              <span className="ml-2 text-xs text-muted-foreground">your-prompt</span>
+            </div>
+            <p className="text-sm text-neon-cyan leading-relaxed whitespace-pre-wrap">{example.prompt}</p>
+          </div>
+
+          {/* Output */}
+          {example.output && (
+            <div className="rounded-xl bg-secondary/50 border border-border p-4">
+              <div className="flex items-center gap-2 mb-3">
+                <Sparkles className="w-3 h-3 text-neon-magenta" />
+                <span className="text-xs text-neon-magenta font-semibold">AI Response</span>
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-wrap">{example.output}</p>
+            </div>
+          )}
+        </div>
+      )}
+    </motion.div>
+  );
+}
 
 export default function CoursePage() {
   const { id } = useParams<{ id: string }>();
@@ -152,7 +214,7 @@ export default function CoursePage() {
               {/* Skills */}
               <h3 className="font-heading text-xl font-bold mb-4">Skills You'll Unlock</h3>
               <div className="grid grid-cols-2 gap-3 mb-12">
-                {course.skillsLearned.map((skill, i) => (
+                {course.skillsLearned.map((skill) => (
                   <div
                     key={skill}
                     className="flex items-center gap-3 p-3 rounded-xl bg-secondary/50 border border-border"
@@ -170,60 +232,80 @@ export default function CoursePage() {
                 <Terminal className="w-7 h-7 inline-block mr-2 text-neon-cyan" />
                 Prompt Examples
               </h2>
-              <p className="text-muted-foreground mb-8">See exactly how to talk to AI — and what happens when you do it right (or wrong).</p>
+              <p className="text-muted-foreground mb-3">See exactly how to talk to AI — and what happens when you do it right (or wrong).</p>
+              <p className="text-xs text-muted-foreground/60 mb-8">Click each example to expand or collapse it.</p>
 
-              <div className="space-y-6">
-                {course.promptExamples.map((example, i) => {
-                  const config = promptTypeConfig[example.type];
-                  const Icon = config.icon;
-                  return (
-                    <motion.div
-                      key={i}
-                      initial={{ opacity: 0, y: 15 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: i * 0.08 }}
-                      className={`rounded-2xl border ${config.borderColor} ${config.bgColor} overflow-hidden`}
-                    >
-                      <div className="p-4 md:p-6">
-                        <div className="flex items-center gap-2 mb-4">
-                          <Icon className={`w-4 h-4 ${config.labelColor}`} />
-                          <span className={`text-xs font-bold uppercase tracking-wider ${config.labelColor}`}>
-                            {config.label}
-                          </span>
-                          <span className="text-xs text-muted-foreground ml-2">— {example.label}</span>
-                        </div>
-
-                        {/* Prompt */}
-                        <div className="terminal-block p-4 mb-4">
-                          <div className="flex items-center gap-2 mb-3">
-                            <div className="w-3 h-3 rounded-full bg-red-500/70" />
-                            <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
-                            <div className="w-3 h-3 rounded-full bg-green-500/70" />
-                            <span className="ml-2 text-xs text-muted-foreground">your-prompt</span>
-                          </div>
-                          <p className="text-sm text-neon-cyan leading-relaxed whitespace-pre-wrap">{example.prompt}</p>
-                        </div>
-
-                        {/* Output */}
-                        {example.output && (
-                          <div className="rounded-xl bg-secondary/50 border border-border p-4">
-                            <div className="flex items-center gap-2 mb-3">
-                              <Sparkles className="w-3 h-3 text-neon-magenta" />
-                              <span className="text-xs text-neon-magenta font-semibold">AI Response</span>
-                            </div>
-                            <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-wrap">{example.output}</p>
-                          </div>
-                        )}
-                      </div>
-                    </motion.div>
-                  );
-                })}
+              <div className="space-y-4">
+                {course.promptExamples.map((example, i) => (
+                  <ExpandablePrompt key={i} example={example} index={i} />
+                ))}
               </div>
             </motion.div>
           </div>
         </div>
       </section>
+
+      {/* Common Mistakes */}
+      {course.commonMistakes && course.commonMistakes.length > 0 && (
+        <section className="py-20 border-t border-border/50">
+          <div className="container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="font-heading text-2xl md:text-4xl font-bold mb-3">
+                <ShieldAlert className="w-7 h-7 inline-block mr-2 text-red-400" />
+                Common Mistakes
+              </h2>
+              <p className="text-muted-foreground max-w-xl mx-auto">
+                Avoid these traps that trip up most beginners. Learning what NOT to do is just as important.
+              </p>
+            </motion.div>
+
+            <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
+              {course.commonMistakes.map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="rounded-2xl border border-red-500/15 bg-red-500/5 p-6 hover:border-red-500/30 transition-colors"
+                >
+                  {/* Mistake */}
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="w-8 h-8 rounded-lg bg-red-500/15 flex items-center justify-center shrink-0 mt-0.5">
+                      <XCircle className="w-4 h-4 text-red-400" />
+                    </div>
+                    <div>
+                      <h4 className="font-heading font-bold text-red-400 text-sm uppercase tracking-wide mb-1">The Mistake</h4>
+                      <p className="text-foreground font-medium leading-relaxed">{item.mistake}</p>
+                    </div>
+                  </div>
+
+                  {/* Why it's bad */}
+                  <div className="flex items-start gap-3 mb-4 pl-11">
+                    <div>
+                      <h4 className="font-heading font-bold text-neon-amber text-sm uppercase tracking-wide mb-1">Why It Hurts</h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{item.why}</p>
+                    </div>
+                  </div>
+
+                  {/* The fix */}
+                  <div className="flex items-start gap-3 pl-11">
+                    <div>
+                      <h4 className="font-heading font-bold text-neon-lime text-sm uppercase tracking-wide mb-1">The Fix</h4>
+                      <p className="text-sm text-neon-lime/80 leading-relaxed">{item.fix}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Activity Steps */}
       <section className="py-20 bg-card/30 border-t border-border/50">
@@ -264,7 +346,29 @@ export default function CoursePage() {
 
                   <div className="rounded-2xl border border-border bg-card p-6 hover:border-neon-cyan/30 transition-colors">
                     <h3 className="font-heading text-lg font-bold mb-2">{step.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{step.description}</p>
+                    <p className="text-muted-foreground leading-relaxed mb-5">{step.description}</p>
+
+                    {/* Video Walkthrough */}
+                    {step.videoWalkthrough && (
+                      <div className="rounded-xl border border-neon-magenta/20 bg-neon-magenta/5 p-4 mb-4">
+                        <div className="flex items-center gap-2 mb-3">
+                          <Video className="w-4 h-4 text-neon-magenta" />
+                          <span className="text-xs font-bold uppercase tracking-wider text-neon-magenta">Walkthrough</span>
+                        </div>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{step.videoWalkthrough}</p>
+                      </div>
+                    )}
+
+                    {/* Pro Tip */}
+                    {step.proTip && (
+                      <div className="rounded-xl border border-neon-amber/20 bg-neon-amber/5 p-4">
+                        <div className="flex items-center gap-2 mb-2">
+                          <Star className="w-4 h-4 text-neon-amber" />
+                          <span className="text-xs font-bold uppercase tracking-wider text-neon-amber">Pro Tip</span>
+                        </div>
+                        <p className="text-sm text-neon-amber/80 leading-relaxed">{step.proTip}</p>
+                      </div>
+                    )}
                   </div>
                 </motion.div>
               ))}
