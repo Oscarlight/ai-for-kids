@@ -3,7 +3,7 @@ import { courseTranslationsZh } from "@/lib/courseTranslations";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { ArrowRight, Rocket, Brain, Zap, Target, ChevronDown, Users, User, Lightbulb, MessageSquare, Workflow, Globe, Presentation } from "lucide-react";
+import { ArrowRight, Rocket, Brain, Zap, Target, ChevronDown, Users, User, Lightbulb, MessageSquare, Workflow, Globe, Presentation, CheckCircle2, XCircle, AlertTriangle } from "lucide-react";
 
 const levelBadgeColors: Record<string, string> = {
   Beginner: "bg-neon-lime/15 text-neon-lime border-neon-lime/30",
@@ -403,37 +403,140 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="py-24 bg-card/30">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-heading text-3xl md:text-5xl font-bold mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
               {t("about.title")}
             </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {t("about.desc")}
             </p>
-            <div className="terminal-block p-6 text-left text-sm">
-              <div className="flex items-center gap-2 mb-4 text-muted-foreground">
-                <div className="w-3 h-3 rounded-full bg-red-500/70" />
-                <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
-                <div className="w-3 h-3 rounded-full bg-green-500/70" />
-                <span className="ml-2 text-xs">curriculum-overview.md</span>
+          </motion.div>
+
+          {/* Three-column diagram */}
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16">
+            {/* What You'll Learn */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0 }}
+              className="rounded-2xl border border-neon-cyan/30 bg-neon-cyan/5 p-6"
+            >
+              <div className="flex items-center gap-2 mb-5">
+                <div className="w-10 h-10 rounded-xl bg-neon-cyan/15 flex items-center justify-center">
+                  <CheckCircle2 className="w-5 h-5 text-neon-cyan" />
+                </div>
+                <h3 className="font-heading font-bold text-neon-cyan">{t("about.learnTitle")}</h3>
               </div>
-              <code className="text-neon-cyan">## {t("about.learnTitle")}</code><br />
-              <code className="text-muted-foreground mt-2 block">- {t("about.learn1")}</code><br />
-              <code className="text-muted-foreground">- {t("about.learn2")}</code><br />
-              <code className="text-muted-foreground">- {t("about.learn3")}</code><br />
-              <code className="text-muted-foreground">- {t("about.learn4")}</code><br />
-              <code className="text-muted-foreground">- {t("about.learn5")}</code><br />
-              <code className="text-muted-foreground">- {t("about.learn6")}</code><br />
-              <code className="text-neon-magenta mt-2 block">## {t("about.notTitle")}</code><br />
-              <code className="text-muted-foreground">- {t("about.not1")}</code><br />
-              <code className="text-muted-foreground">- {t("about.not2")}</code><br />
-              <code className="text-muted-foreground">- {t("about.not3")}</code><br />
-              <code className="text-neon-lime mt-2 block">## {t("about.prereqTitle")}</code><br />
-              <code className="text-muted-foreground">- {t("about.prereq1")}</code><br />
-              <code className="text-muted-foreground">- {t("about.prereq2")}</code><br />
-              <code className="text-muted-foreground">- {t("about.prereq3")}</code>
-            </div>
+              <ul className="space-y-3">
+                {[t("about.learn1"), t("about.learn2"), t("about.learn3"), t("about.learn4"), t("about.learn5"), t("about.learn6")].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-neon-cyan mt-2 shrink-0" />
+                    <span className="text-sm text-foreground/90 leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* What This Is NOT */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="rounded-2xl border border-neon-magenta/30 bg-neon-magenta/5 p-6"
+            >
+              <div className="flex items-center gap-2 mb-5">
+                <div className="w-10 h-10 rounded-xl bg-neon-magenta/15 flex items-center justify-center">
+                  <XCircle className="w-5 h-5 text-neon-magenta" />
+                </div>
+                <h3 className="font-heading font-bold text-neon-magenta">{t("about.notTitle")}</h3>
+              </div>
+              <ul className="space-y-3">
+                {[t("about.not1"), t("about.not2"), t("about.not3")].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-neon-magenta mt-2 shrink-0" />
+                    <span className="text-sm text-foreground/90 leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Prerequisites */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="rounded-2xl border border-neon-lime/30 bg-neon-lime/5 p-6"
+            >
+              <div className="flex items-center gap-2 mb-5">
+                <div className="w-10 h-10 rounded-xl bg-neon-lime/15 flex items-center justify-center">
+                  <Rocket className="w-5 h-5 text-neon-lime" />
+                </div>
+                <h3 className="font-heading font-bold text-neon-lime">{t("about.prereqTitle")}</h3>
+              </div>
+              <ul className="space-y-3">
+                {[t("about.prereq1"), t("about.prereq2"), t("about.prereq3")].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <div className="w-1.5 h-1.5 rounded-full bg-neon-lime mt-2 shrink-0" />
+                    <span className="text-sm text-foreground/90 leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           </div>
+
+          {/* Instructor Info */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto mb-12"
+          >
+            <h3 className="font-heading text-xl font-bold text-center mb-6">{t("about.instructors")}</h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              <a href="https://www.linkedin.com/in/jiayan-zhu-30028723b/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-xl border border-border bg-card hover:border-neon-cyan/30 transition-all group">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-neon-cyan to-neon-magenta flex items-center justify-center font-heading font-bold text-background text-lg shrink-0">JZ</div>
+                <div>
+                  <p className="font-heading font-semibold group-hover:text-neon-cyan transition-colors">Jiayan Zhu</p>
+                  <p className="text-xs text-muted-foreground">{t("about.instructor1")}</p>
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/mingdalight/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 rounded-xl border border-border bg-card hover:border-neon-cyan/30 transition-all group">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-neon-magenta to-neon-amber flex items-center justify-center font-heading font-bold text-background text-lg shrink-0">ML</div>
+                <div>
+                  <p className="font-heading font-semibold group-hover:text-neon-cyan transition-colors">Mingda Li</p>
+                  <p className="text-xs text-muted-foreground">{t("about.instructor2")}</p>
+                </div>
+              </a>
+            </div>
+          </motion.div>
+
+          {/* Research Disclaimer */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto"
+          >
+            <div className="rounded-xl border border-neon-amber/30 bg-neon-amber/5 p-5">
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-lg bg-neon-amber/15 flex items-center justify-center shrink-0 mt-0.5">
+                  <AlertTriangle className="w-4 h-4 text-neon-amber" />
+                </div>
+                <div>
+                  <h4 className="font-heading font-bold text-neon-amber text-sm mb-2">{t("about.disclaimerTitle")}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{t("about.disclaimerText")}</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

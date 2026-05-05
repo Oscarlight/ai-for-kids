@@ -135,6 +135,11 @@ const zhTranslations: Record<string, string> = {
   "about.prereq1": "基本电脑操作 + 打字能力",
   "about.prereq2": "一个AI订阅账号（如Manus）",
   "about.prereq3": "好奇心和实验精神",
+  "about.instructors": "课程导师",
+  "about.instructor1": "里海大学 AI教育方向 博士研究生",
+  "about.instructor2": "Meta 首席研究科学家",
+  "about.disclaimerTitle": "学术研究声明",
+  "about.disclaimerText": "本课程的教学内容和学生学习数据将用于AI教育领域的学术研究。参与课程前，学生家长/监护人需签署数据共享知情同意书。所有数据将严格按照学术伦理规范进行匿名化处理和保护，仅用于改进AI教育方法的研究目的。",
 
   // Footer
   "footer.tagline": "为下一代准备AI时代的核心能力。",
@@ -274,6 +279,11 @@ const enTranslations: Record<string, string> = {
   "about.prereq1": "Basic computer skills + typing",
   "about.prereq2": "A premium AI subscription (e.g., Manus)",
   "about.prereq3": "Curiosity and willingness to experiment",
+  "about.instructors": "Instructors",
+  "about.instructor1": "PhD Student in AI for Learning at Lehigh University",
+  "about.instructor2": "Principal Research Scientist at Meta",
+  "about.disclaimerTitle": "Academic Research Disclaimer",
+  "about.disclaimerText": "This course's teaching content and student learning data will be used for academic research in AI education. Before participating, parents/guardians must sign a data-sharing consent form. All data will be anonymized and protected in strict accordance with academic ethics standards, and used solely for research purposes to improve AI education methods.",
 
   // Footer
   "footer.tagline": "Preparing the next generation for an AI-powered world.",
