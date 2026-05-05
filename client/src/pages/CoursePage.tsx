@@ -4,7 +4,7 @@ import { resolveImagePath } from "@/lib/imagePaths";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useParams, Link } from "wouter";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -103,6 +103,10 @@ export default function CoursePage() {
   const courseId = parseInt(id || "1");
   const course = courses.find((c) => c.id === courseId);
   const { lang, setLang, t } = useLanguage();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [courseId]);
   const zhTranslation = courseTranslationsZh[courseId];
 
   if (!course) {

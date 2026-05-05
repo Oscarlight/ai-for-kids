@@ -4,6 +4,7 @@ import { courseTranslationsZh } from "@/lib/courseTranslations";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link, useParams } from "wouter";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 import { ArrowLeft, ArrowRight, Zap, MessageSquare, Users, Lightbulb, Star, Presentation } from "lucide-react";
 
 export default function ShowSharePage() {
@@ -14,6 +15,10 @@ export default function ShowSharePage() {
   const course = courses.find((c) => c.id === courseId);
   const session = showShareSessions.find((s) => s.courseId === courseId);
   const zhTranslation = courseTranslationsZh[courseId];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [courseId]);
 
   if (!course || !session) {
     return (
