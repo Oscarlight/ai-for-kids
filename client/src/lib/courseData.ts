@@ -46,7 +46,7 @@ export const courses: Course[] = [
     project: "The Interactive Choose-Your-Own-Adventure",
     level: "Beginner",
     color: "cyan",
-    heroImage: "/images/course1_hero.png",
+    heroImage: "/manus-storage/course1_hero_68851049.png",
     schoolConnection: "English / Language Arts",
     overview: "Forget sitting and listening! In this project, you're the director, and AI is your co-writer. You'll learn how to talk to AI, give it specific rules, and see what happens when you let it surprise you. The secret? A vague prompt gets a boring answer. A specific, creative prompt unlocks magic.",
     promptExamples: [
@@ -156,7 +156,7 @@ export const courses: Course[] = [
     project: "The Ultimate Fantasy/Sci-Fi World Bible",
     level: "Beginner",
     color: "magenta",
-    heroImage: "/images/course2_hero.png",
+    heroImage: "/manus-storage/course2_hero_0f5a7a4d.png",
     schoolConnection: "Creative Writing / Art",
     overview: "Ever wanted to design your own video game world or fantasy novel setting? AI is the ultimate brainstorming buddy to help you fill in the details — geography, magic systems, politics, and weird local foods. Your job is to steer the ship. Use the 'Yes, And...' rule from improv: take the AI's ideas and build on them.",
     promptExamples: [
@@ -255,7 +255,7 @@ export const courses: Course[] = [
     project: "The Truth Revealed Mini-Documentary Script",
     level: "Beginner",
     color: "lime",
-    heroImage: "/images/course3_hero.png",
+    heroImage: "/manus-storage/course3_hero_4cb2ad46.png",
     schoolConnection: "History / Social Studies",
     overview: "AI can summarize huge amounts of text in seconds, but it also lies with a straight face (we call these 'hallucinations'). Your job is to use AI to gather information fast, then act as the lead detective to fact-check everything. Trust, but verify!",
     promptExamples: [
@@ -359,7 +359,7 @@ export const courses: Course[] = [
     project: "The Local Climate Action Dashboard",
     level: "Intermediate",
     color: "amber",
-    heroImage: "/images/course4_hero.png",
+    heroImage: "/manus-storage/course4_hero_b04393aa.png",
     schoolConnection: "Math / Environmental Science",
     overview: "You don't need to be a math genius to analyze data anymore. AI agents can write code, create charts, and find patterns for you. You just need to know what questions to ask. This is where AI goes from 'chatbot' to 'agent' — it doesn't just talk, it DOES things.",
     promptExamples: [
@@ -458,7 +458,7 @@ export const courses: Course[] = [
     project: "The Shark Tank Pitch Deck",
     level: "Intermediate",
     color: "purple",
-    heroImage: "/images/course5_hero.png",
+    heroImage: "/manus-storage/course5_hero_df29f667.png",
     schoolConnection: "Business / Media Arts",
     overview: "Text is just the beginning. AI can generate images, create presentations, and design logos. In this project, you'll combine multiple AI capabilities — text, image, and presentation generation — to create a complete startup pitch. Think Shark Tank, but powered by AI.",
     promptExamples: [
@@ -557,7 +557,7 @@ export const courses: Course[] = [
     project: "The Rube Goldberg Machine Simulator",
     level: "Intermediate",
     color: "cyan",
-    heroImage: "/images/course6_hero.png",
+    heroImage: "/manus-storage/course6_hero_da6f9600.png",
     schoolConnection: "Physics / Computer Science",
     overview: "AI isn't magic — it's a logic engine. If you give it a massive, complex problem all at once, it will fail. You need to learn 'computational thinking' — how to break a big problem into tiny, logical steps that the AI can handle one at a time. This is the #1 skill that separates AI beginners from AI power users.",
     promptExamples: [
@@ -656,7 +656,7 @@ export const courses: Course[] = [
     project: "The Ultimate Study Planner & Researcher",
     level: "Advanced",
     color: "magenta",
-    heroImage: "/images/course7_hero.png",
+    heroImage: "/manus-storage/course7_hero_f2085447.png",
     schoolConnection: "Study Skills / Project Management",
     overview: "Regular AI just talks to you. Agentic AI can DO things — like search the web, read files, write code, and create documents. You're stepping up from being a conversationalist to being a manager. You give the orders; the agent executes.",
     promptExamples: [
@@ -754,7 +754,7 @@ export const courses: Course[] = [
     project: "The Automated School Newsroom",
     level: "Advanced",
     color: "lime",
-    heroImage: "/images/course8_hero.png",
+    heroImage: "/manus-storage/course8_hero_bf45749d.png",
     schoolConnection: "Journalism / Student Council",
     overview: "Why do a repetitive task yourself when you can build a workflow? In this course, you'll learn how to connect different AI tasks so the output of one becomes the input of the next — like a factory assembly line, but for information.",
     promptExamples: [
@@ -853,7 +853,7 @@ export const courses: Course[] = [
     project: "The Custom Flashcard Web App",
     level: "Advanced",
     color: "amber",
-    heroImage: "/images/course9_hero.png",
+    heroImage: "/manus-storage/course9_hero_e816dbfe.png",
     schoolConnection: "Computer Science / Entrepreneurship",
     overview: "You don't need to know HTML, CSS, or JavaScript to build software anymore. You just need to know how to give precise technical instructions to an AI agent. Think of yourself as the Product Manager — you describe WHAT to build, and the AI figures out HOW.",
     promptExamples: [
@@ -957,7 +957,7 @@ export const courses: Course[] = [
     project: "The Community Impact Proposal",
     level: "Advanced",
     color: "purple",
-    heroImage: "/images/course10_hero.png",
+    heroImage: "/manus-storage/course10_hero_41a03514.png",
     schoolConnection: "Interdisciplinary (Science, Social Studies, English)",
     overview: "This is the final boss. You will act as the 'Orchestrator,' using EVERY skill you've learned — conversational AI, data analysis, web research, image generation, workflow automation, and app building — to create a comprehensive solution to a real problem in your community.",
     promptExamples: [
