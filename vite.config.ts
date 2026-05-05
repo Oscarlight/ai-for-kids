@@ -207,6 +207,9 @@ const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(
 
 export default defineConfig({
   base: process.env.GITHUB_PAGES ? "/ai-for-kids/" : "/",
+  define: {
+    __GITHUB_PAGES__: JSON.stringify(!!process.env.GITHUB_PAGES),
+  },
   plugins,
   resolve: {
     alias: {

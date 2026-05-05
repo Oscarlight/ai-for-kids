@@ -1,5 +1,6 @@
 import { courses } from "@/lib/courseData";
 import { courseTranslationsZh } from "@/lib/courseTranslations";
+import { resolveImagePath } from "@/lib/imagePaths";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useParams, Link } from "wouter";
 import { motion } from "framer-motion";
@@ -169,7 +170,7 @@ export default function CoursePage() {
       <section className="relative pt-16">
         <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden">
           <img
-            src={course.heroImage}
+            src={resolveImagePath(course.heroImage)}
             alt={title}
             className="w-full h-full object-cover"
           />

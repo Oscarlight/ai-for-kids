@@ -1,5 +1,6 @@
 import { courses } from "@/lib/courseData";
 import { courseTranslationsZh } from "@/lib/courseTranslations";
+import { resolveImagePath } from "@/lib/imagePaths";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
@@ -335,7 +336,7 @@ export default function Home() {
                         {/* Image */}
                         <div className="md:w-72 lg:w-80 h-44 md:h-auto relative overflow-hidden shrink-0">
                           <img
-                            src={course.heroImage}
+                            src={resolveImagePath(course.heroImage)}
                             alt={title}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           />
