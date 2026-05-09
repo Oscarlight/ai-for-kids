@@ -17,7 +17,7 @@ interface LanguageProviderProps {
 
 export function LanguageProvider({
   children,
-  defaultLang = "zh",
+  defaultLang = "en",
 }: LanguageProviderProps) {
   const [lang, setLangState] = useState<Language>(() => {
     const stored = localStorage.getItem("lang");
