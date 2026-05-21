@@ -59,7 +59,7 @@ const zhTranslations: Record<string, string> = {
   "nav.objectives": "学习目标",
 
   // Hero
-  "hero.badge": "14节项目制课程 · 适合13岁以上",
+  "hero.badge": "14节项目制课程 · 适合13岁左右",
   "hero.title1": "学会与AI",
   "hero.title.think": "思考",
   "hero.title2": "，",
@@ -203,7 +203,7 @@ const enTranslations: Record<string, string> = {
   "nav.objectives": "Objectives",
 
   // Hero
-  "hero.badge": "14 Project-Based Classes · Ages 13+",
+  "hero.badge": "14 Project-Based Classes · Around Age 13",
   "hero.title1": "Learn to ",
   "hero.title.think": "Think",
   "hero.title2": " with AI,",

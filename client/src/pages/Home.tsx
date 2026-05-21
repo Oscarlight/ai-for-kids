@@ -145,10 +145,9 @@ export default function Home() {
       {/* Stats Bar */}
       <section className="border-y border-border/50 bg-card/50 backdrop-blur-sm">
         <div className="container py-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-3 gap-8">
             {[
               { label: t("stats.classes"), value: t("stats.classesValue"), icon: Brain },
-              { label: t("stats.levels"), value: t("stats.levelsValue"), icon: Target },
               { label: t("stats.projects"), value: t("stats.projectsValue"), icon: Rocket },
               { label: t("stats.skills"), value: t("stats.skillsValue"), icon: Zap },
             ].map((stat) => (
