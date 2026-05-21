@@ -4,7 +4,7 @@ import { resolveImagePath } from "@/lib/imagePaths";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useParams, Link } from "wouter";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import {
   ArrowLeft,
   ArrowRight,
@@ -13,19 +13,11 @@ import {
   BookOpen,
   Lightbulb,
   CheckCircle2,
-  AlertTriangle,
   Sparkles,
-  Terminal,
-  Wrench,
-  ChevronRight,
-  ChevronDown,
-  XCircle,
-  ShieldAlert,
-  Video,
-  Star,
   Users,
   User,
   Presentation,
+  Brain,
 } from "lucide-react";
 
 const levelBadgeColors: Record<string, string> = {
@@ -33,70 +25,6 @@ const levelBadgeColors: Record<string, string> = {
   Intermediate: "bg-neon-amber/15 text-neon-amber border-neon-amber/30",
   Advanced: "bg-neon-magenta/15 text-neon-magenta border-neon-magenta/30",
 };
-
-function ExpandablePrompt({ example, index, lang }: { example: any; index: number; lang: string }) {
-  const [expanded, setExpanded] = useState(index < 3);
-  const { t } = useLanguage();
-
-  const promptTypeConfig: Record<string, { icon: typeof Zap; label: string; borderColor: string; bgColor: string; labelColor: string }> = {
-    bad: { icon: AlertTriangle, label: t("prompt.bad"), borderColor: "border-red-500/30", bgColor: "bg-red-500/5", labelColor: "text-red-400" },
-    good: { icon: CheckCircle2, label: t("prompt.good"), borderColor: "border-neon-lime/30", bgColor: "bg-neon-lime/5", labelColor: "text-neon-lime" },
-    followup: { icon: ChevronRight, label: t("prompt.followup"), borderColor: "border-neon-cyan/30", bgColor: "bg-neon-cyan/5", labelColor: "text-neon-cyan" },
-    agent: { icon: Wrench, label: t("prompt.agent"), borderColor: "border-neon-magenta/30", bgColor: "bg-neon-magenta/5", labelColor: "text-neon-magenta" },
-    step: { icon: Sparkles, label: t("prompt.step"), borderColor: "border-neon-amber/30", bgColor: "bg-neon-amber/5", labelColor: "text-neon-amber" },
-  };
-
-  const config = promptTypeConfig[example.type];
-  const Icon = config.icon;
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 15 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: Math.min(index * 0.06, 0.3) }}
-      className={`rounded-2xl border ${config.borderColor} ${config.bgColor} overflow-hidden`}
-    >
-      <button
-        onClick={() => setExpanded(!expanded)}
-        className="w-full p-4 md:p-6 flex items-center justify-between text-left"
-      >
-        <div className="flex items-center gap-2">
-          <Icon className={`w-4 h-4 ${config.labelColor} shrink-0`} />
-          <span className={`text-xs font-bold uppercase tracking-wider ${config.labelColor}`}>
-            {config.label}
-          </span>
-          <span className="text-xs text-muted-foreground ml-2">— {example.label}</span>
-        </div>
-        <ChevronDown className={`w-4 h-4 text-muted-foreground transition-transform duration-200 shrink-0 ${expanded ? "rotate-180" : ""}`} />
-      </button>
-
-      {expanded && (
-        <div className="px-4 pb-4 md:px-6 md:pb-6">
-          <div className="terminal-block p-4 mb-4">
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-3 h-3 rounded-full bg-red-500/70" />
-              <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
-              <div className="w-3 h-3 rounded-full bg-green-500/70" />
-              <span className="ml-2 text-xs text-muted-foreground">your-prompt</span>
-            </div>
-            <p className="text-sm text-neon-cyan leading-relaxed whitespace-pre-wrap">{example.prompt}</p>
-          </div>
-
-          {example.output && (
-            <div className="rounded-xl bg-secondary/50 border border-border p-4">
-              <div className="flex items-center gap-2 mb-3">
-                <Sparkles className="w-3 h-3 text-neon-magenta" />
-                <span className="text-xs text-neon-magenta font-semibold">AI Response</span>
-              </div>
-              <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-wrap">{example.output}</p>
-            </div>
-          )}
-        </div>
-      )}
-    </motion.div>
-  );
-}
 
 export default function CoursePage() {
   const { id } = useParams<{ id: string }>();
@@ -107,6 +35,7 @@ export default function CoursePage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [courseId]);
+
   const zhTranslation = courseTranslationsZh[courseId];
 
   if (!course) {
@@ -131,6 +60,9 @@ export default function CoursePage() {
   const funFact = lang === "zh" && zhTranslation ? zhTranslation.funFact : course.funFact;
   const schoolConn = lang === "zh" && zhTranslation ? zhTranslation.schoolConnection : course.schoolConnection;
   const skills = lang === "zh" && zhTranslation ? zhTranslation.skillsLearned : course.skillsLearned;
+  const agenticTerm = lang === "zh" && zhTranslation ? zhTranslation.agenticConcept.term : course.agenticConcept.term;
+  const agenticExplanation = lang === "zh" && zhTranslation ? zhTranslation.agenticConcept.explanation : course.agenticConcept.explanation;
+  const activityOverview = lang === "zh" && zhTranslation ? zhTranslation.activityOverview : course.activityOverview;
   const isGroup = course.level !== "Beginner";
 
   return (
@@ -231,8 +163,8 @@ export default function CoursePage() {
                 <p className="text-foreground font-medium leading-relaxed mb-6">{mission}</p>
 
                 <div className="flex items-center gap-2 mb-3">
-                  <BookOpen className="w-5 h-5 text-neon-magenta" />
-                  <h3 className="font-heading font-bold text-neon-magenta">{t("course.project")}</h3>
+                  <BookOpen className="w-5 h-5 text-neon-lime" />
+                  <h3 className="font-heading font-bold text-neon-lime">{t("course.project")}</h3>
                 </div>
                 <p className="text-foreground font-medium leading-relaxed mb-6">{project}</p>
 
@@ -254,7 +186,7 @@ export default function CoursePage() {
               </div>
             </motion.div>
 
-            {/* Overview */}
+            {/* Overview & Content */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -263,12 +195,28 @@ export default function CoursePage() {
               className="lg:col-span-2"
             >
               <h2 className="font-heading text-2xl md:text-3xl font-bold mb-6">{t("course.about")}</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">{overview}</p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-10">{overview}</p>
+
+              {/* Agentic AI Concept */}
+              <div className="rounded-2xl border border-neon-magenta/20 bg-neon-magenta/5 p-6 mb-10">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-neon-magenta/15 flex items-center justify-center">
+                    <Brain className="w-5 h-5 text-neon-magenta" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-wider text-neon-magenta/70">
+                      {lang === "zh" ? "AI智能体概念" : "Agentic AI Concept"}
+                    </p>
+                    <h3 className="font-heading text-xl font-bold text-neon-magenta">{agenticTerm}</h3>
+                  </div>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">{agenticExplanation}</p>
+              </div>
 
               {/* Skills */}
               <h3 className="font-heading text-xl font-bold mb-4">{t("course.skills")}</h3>
               <div className="grid grid-cols-2 gap-3 mb-12">
-                {skills.map((skill) => (
+                {skills.map((skill: string) => (
                   <div
                     key={skill}
                     className="flex items-center gap-3 p-3 rounded-xl bg-secondary/50 border border-border"
@@ -281,145 +229,35 @@ export default function CoursePage() {
                 ))}
               </div>
 
-              {/* Prompt Examples */}
+              {/* Activity Overview */}
               <h2 className="font-heading text-2xl md:text-3xl font-bold mb-2">
-                <Terminal className="w-7 h-7 inline-block mr-2 text-neon-cyan" />
-                {t("course.prompts")}
+                <Sparkles className="w-7 h-7 inline-block mr-2 text-neon-lime" />
+                {t("course.activity")}
               </h2>
-              <p className="text-muted-foreground mb-3">{t("course.promptsDesc")}</p>
-              <p className="text-xs text-muted-foreground/60 mb-8">{t("course.promptsHint")}</p>
+              <p className="text-muted-foreground mb-8">{t("course.activityDesc")}</p>
 
-              <div className="space-y-4">
-                {course.promptExamples.map((example, i) => (
-                  <ExpandablePrompt key={i} example={example} index={i} lang={lang} />
+              <div className="relative">
+                <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-neon-cyan via-neon-magenta to-neon-lime" />
+
+                {activityOverview.map((step: string, i: number) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="relative pl-16 pb-8 last:pb-0"
+                  >
+                    <div className="absolute left-0 w-12 h-12 rounded-xl bg-background border-2 border-neon-cyan/40 flex items-center justify-center font-heading font-bold text-neon-cyan">
+                      {i + 1}
+                    </div>
+                    <div className="rounded-2xl border border-border bg-card p-5 hover:border-neon-cyan/30 transition-colors">
+                      <p className="text-foreground leading-relaxed">{step}</p>
+                    </div>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Common Mistakes */}
-      {course.commonMistakes && course.commonMistakes.length > 0 && (
-        <section className="py-20 border-t border-border/50">
-          <div className="container">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="font-heading text-2xl md:text-4xl font-bold mb-3">
-                <ShieldAlert className="w-7 h-7 inline-block mr-2 text-red-400" />
-                {t("course.mistakes")}
-              </h2>
-              <p className="text-muted-foreground max-w-xl mx-auto">
-                {t("course.mistakesDesc")}
-              </p>
-            </motion.div>
-
-            <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
-              {course.commonMistakes.map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="rounded-2xl border border-red-500/15 bg-red-500/5 p-6 hover:border-red-500/30 transition-colors"
-                >
-                  <div className="flex items-start gap-3 mb-4">
-                    <div className="w-8 h-8 rounded-lg bg-red-500/15 flex items-center justify-center shrink-0 mt-0.5">
-                      <XCircle className="w-4 h-4 text-red-400" />
-                    </div>
-                    <div>
-                      <h4 className="font-heading font-bold text-red-400 text-sm uppercase tracking-wide mb-1">{t("course.theMistake")}</h4>
-                      <p className="text-foreground font-medium leading-relaxed">{item.mistake}</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3 mb-4 pl-11">
-                    <div>
-                      <h4 className="font-heading font-bold text-neon-amber text-sm uppercase tracking-wide mb-1">{t("course.whyHurts")}</h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{item.why}</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3 pl-11">
-                    <div>
-                      <h4 className="font-heading font-bold text-neon-lime text-sm uppercase tracking-wide mb-1">{t("course.theFix")}</h4>
-                      <p className="text-sm text-neon-lime/80 leading-relaxed">{item.fix}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Activity Steps */}
-      <section className="py-20 bg-card/30 border-t border-border/50">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-heading text-2xl md:text-4xl font-bold mb-3">
-              <Zap className="w-7 h-7 inline-block mr-2 text-neon-lime" />
-              {t("course.activity")}
-            </h2>
-            <p className="text-muted-foreground max-w-xl mx-auto">
-              {t("course.activityDesc")}
-            </p>
-          </motion.div>
-
-          <div className="max-w-3xl mx-auto">
-            <div className="relative">
-              <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-neon-cyan via-neon-magenta to-neon-lime" />
-
-              {course.activitySteps.map((step, i) => (
-                <motion.div
-                  key={step.step}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.12 }}
-                  className="relative pl-16 pb-10 last:pb-0"
-                >
-                  <div className="absolute left-0 w-12 h-12 rounded-xl bg-background border-2 border-neon-cyan/40 flex items-center justify-center font-heading font-bold text-neon-cyan">
-                    {step.step}
-                  </div>
-
-                  <div className="rounded-2xl border border-border bg-card p-6 hover:border-neon-cyan/30 transition-colors">
-                    <h3 className="font-heading text-lg font-bold mb-2">{step.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed mb-5">{step.description}</p>
-
-                    {step.videoWalkthrough && (
-                      <div className="rounded-xl border border-neon-magenta/20 bg-neon-magenta/5 p-4 mb-4">
-                        <div className="flex items-center gap-2 mb-3">
-                          <Video className="w-4 h-4 text-neon-magenta" />
-                          <span className="text-xs font-bold uppercase tracking-wider text-neon-magenta">{t("course.walkthrough")}</span>
-                        </div>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{step.videoWalkthrough}</p>
-                      </div>
-                    )}
-
-                    {step.proTip && (
-                      <div className="rounded-xl border border-neon-amber/20 bg-neon-amber/5 p-4">
-                        <div className="flex items-center gap-2 mb-2">
-                          <Star className="w-4 h-4 text-neon-amber" />
-                          <span className="text-xs font-bold uppercase tracking-wider text-neon-amber">{t("course.proTip")}</span>
-                        </div>
-                        <p className="text-sm text-neon-amber/80 leading-relaxed">{step.proTip}</p>
-                      </div>
-                    )}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
@@ -471,7 +309,7 @@ export default function CoursePage() {
               <span className="font-heading font-semibold text-sm">{t("nav.title")}</span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              {lang === "zh" ? `课程 ${course.id}` : `Course ${course.id}`} {t("course.of")} 10
+              {lang === "zh" ? `课程 ${course.id}` : `Course ${course.id}`} {t("course.of")} 7
             </p>
           </div>
         </div>

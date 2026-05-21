@@ -59,7 +59,7 @@ const zhTranslations: Record<string, string> = {
   "nav.objectives": "学习目标",
 
   // Hero
-  "hero.badge": "20节项目制课程 · 适合9-12年级",
+  "hero.badge": "14节项目制课程 · 适合13岁以上",
   "hero.title1": "学会与AI",
   "hero.title.think": "思考",
   "hero.title2": "，",
@@ -72,11 +72,11 @@ const zhTranslations: Record<string, string> = {
 
   // Stats
   "stats.classes": "课时",
-  "stats.classesValue": "20",
+  "stats.classesValue": "14",
   "stats.levels": "难度等级",
   "stats.levelsValue": "3",
   "stats.projects": "实战项目",
-  "stats.projectsValue": "10",
+  "stats.projectsValue": "7",
   "stats.skills": "AI技能",
   "stats.skillsValue": "40+",
 
@@ -112,8 +112,8 @@ const zhTranslations: Record<string, string> = {
   "journey.group": "小组项目",
 
   // Course grid
-  "courses.title": "全部20节课",
-  "courses.subtitle": "10个项目课 + 10个展示与分享课。每个项目课后都有一节专门的展示课，巩固理解、锻炼表达。",
+  "courses.title": "全部14节课",
+  "courses.subtitle": "7个项目课 + 7个展示与分享课。每个项目课后都有一节专门的展示课，巩固理解、锻炼表达。",
   "courses.startMission": "开始任务",
   "courses.showShare": "展示与分享",
 
@@ -139,7 +139,7 @@ const zhTranslations: Record<string, string> = {
   "about.instructor1": "里海大学 AI教育方向 博士研究生",
   "about.instructor2": "Meta 首席研究科学家",
   "about.disclaimerTitle": "学术研究声明",
-  "about.disclaimerText": "本课程的教学内容和学生学习数据将用于AI教育领域的学术研究。参与课程前，学生家长/监护人需签署数据共享知情同意书。所有数据将严格按照学术伦理规范进行匿名化处理和保护，仅用于改进AI教育方法的研究目的。",
+  "about.disclaimerText": "本课程的教学内容和学生学习数据将用于AI教育领域的学术研究。参与课程前，学生家长/监护人需签署数据共享知情同意书。所有数据将严格按照学术伦理规范进行匿名化处理和保护，仅用于改进AI教育方法的研究目的。13岁以下学生参加课程时，家长/监护人需全程陪同。",
 
   // Footer
   "footer.tagline": "为下一代准备AI时代的核心能力。",
@@ -203,7 +203,7 @@ const enTranslations: Record<string, string> = {
   "nav.objectives": "Objectives",
 
   // Hero
-  "hero.badge": "20 Project-Based Classes · Grades 9-12",
+  "hero.badge": "14 Project-Based Classes · Ages 13+",
   "hero.title1": "Learn to ",
   "hero.title.think": "Think",
   "hero.title2": " with AI,",
@@ -216,11 +216,11 @@ const enTranslations: Record<string, string> = {
 
   // Stats
   "stats.classes": "Classes",
-  "stats.classesValue": "20",
+  "stats.classesValue": "14",
   "stats.levels": "Skill Levels",
   "stats.levelsValue": "3",
   "stats.projects": "Real Projects",
-  "stats.projectsValue": "10",
+  "stats.projectsValue": "7",
   "stats.skills": "AI Skills",
   "stats.skillsValue": "40+",
 
@@ -256,8 +256,8 @@ const enTranslations: Record<string, string> = {
   "journey.group": "Group Project",
 
   // Course grid
-  "courses.title": "All 20 Classes",
-  "courses.subtitle": "10 project classes + 10 Show & Share classes. Each project is followed by a dedicated presentation session to solidify understanding and practice communication.",
+  "courses.title": "All 14 Classes",
+  "courses.subtitle": "7 project classes + 7 Show & Share classes. Each project is followed by a dedicated presentation session to solidify understanding and practice communication.",
   "courses.startMission": "Start Mission",
   "courses.showShare": "Show & Share",
 
@@ -283,7 +283,7 @@ const enTranslations: Record<string, string> = {
   "about.instructor1": "PhD Student in AI for Learning at Lehigh University",
   "about.instructor2": "Principal Research Scientist at Meta",
   "about.disclaimerTitle": "Academic Research Disclaimer",
-  "about.disclaimerText": "This course's teaching content and student learning data will be used for academic research in AI education. Before participating, parents/guardians must sign a data-sharing consent form. All data will be anonymized and protected in strict accordance with academic ethics standards, and used solely for research purposes to improve AI education methods.",
+  "about.disclaimerText": "This course's teaching content and student learning data will be used for academic research in AI education. Before participating, parents/guardians must sign a data-sharing consent form. All data will be anonymized and protected in strict accordance with academic ethics standards, and used solely for research purposes to improve AI education methods. For students under 13, a parent/guardian must be present during all sessions.",
 
   // Footer
   "footer.tagline": "Preparing the next generation for an AI-powered world.",
