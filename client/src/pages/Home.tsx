@@ -56,7 +56,6 @@ export default function Home() {
             <div className="hidden md:flex items-center gap-6 text-sm text-muted-foreground">
               <a href="#objectives" className="hover:text-foreground transition-colors">{t("nav.objectives")}</a>
               <a href="#courses" className="hover:text-foreground transition-colors">{t("nav.courses")}</a>
-              <a href="#journey" className="hover:text-foreground transition-colors">{t("nav.journey")}</a>
               <a href="#about" className="hover:text-foreground transition-colors">{t("nav.about")}</a>
             </div>
             {/* Language Switcher */}
@@ -208,90 +207,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Journey Section */}
-      <section id="journey" className="py-24 bg-card/30">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
-              {t("journey.title")}
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              {t("journey.subtitle")}
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                level: "Beginner",
-                levelLabel: t("journey.beginner"),
-                courses: "1-3",
-                title: t("journey.beginnerTitle"),
-                description: t("journey.beginnerDesc"),
-                skills: lang === "zh" ? ["提示工程", "创意策展", "事实核查"] : ["Prompt Crafting", "Creative Curation", "Fact-Checking"],
-                color: "neon-lime",
-                collab: t("journey.individual"),
-                collabIcon: User,
-              },
-              {
-                level: "Intermediate",
-                levelLabel: t("journey.intermediate"),
-                courses: "4-6",
-                title: t("journey.intermediateTitle"),
-                description: t("journey.intermediateDesc"),
-                skills: lang === "zh" ? ["数据分析", "多模态创作", "计算思维"] : ["Data Analysis", "Image + Text", "Computational Thinking"],
-                color: "neon-amber",
-                collab: t("journey.group"),
-                collabIcon: Users,
-              },
-              {
-                level: "Advanced",
-                levelLabel: t("journey.advanced"),
-                courses: "7-10",
-                title: t("journey.advancedTitle"),
-                description: t("journey.advancedDesc"),
-                skills: lang === "zh" ? ["智能体指令", "工作流自动化", "应用构建"] : ["Agentic Commands", "Workflow Automation", "App Building"],
-                color: "neon-magenta",
-                collab: t("journey.group"),
-                collabIcon: Users,
-              },
-            ].map((tier, i) => (
-              <motion.div
-                key={tier.level}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
-                className="relative rounded-2xl border border-border bg-card p-8 hover:border-border/80 transition-all duration-300"
-              >
-                <div className="flex items-center gap-2 mb-4">
-                  <span className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold ${levelBadgeColors[tier.level]}`}>
-                    {lang === "zh" ? `课程 ${tier.courses}` : `Courses ${tier.courses}`} — {tier.levelLabel}
-                  </span>
-                </div>
-                <h3 className="font-heading text-2xl font-bold mb-3">{tier.title}</h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed text-sm">{tier.description}</p>
-                <div className="flex items-center gap-2 mb-4 text-xs">
-                  <tier.collabIcon className={`w-4 h-4 text-${tier.color}`} />
-                  <span className="text-muted-foreground font-medium">{tier.collab}</span>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {tier.skills.map((skill) => (
-                    <span key={skill} className="text-xs px-3 py-1 rounded-full bg-secondary text-secondary-foreground">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Course Grid - 20 Classes */}
       <section id="courses" className="py-24">
