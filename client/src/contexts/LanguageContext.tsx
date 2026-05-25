@@ -140,7 +140,7 @@ const zhTranslations: Record<string, string> = {
   "about.prereq3": "好奇心和实验精神",
   "about.instructors": "课程导师",
   "about.instructor1": "里海大学 AI教育方向 博士研究生",
-  "about.instructor2": "AI教育研究员",
+  "about.instructor2": "AI研究科学家",
   "about.disclaimerTitle": "学术研究声明",
   "about.disclaimerText": "本课程的教学内容和学生学习数据将用于AI教育领域的学术研究。参与课程前，学生家长/监护人需签署数据共享知情同意书。所有数据将严格按照学术伦理规范进行匿名化处理和保护，仅用于改进AI教育方法的研究目的。13岁以下学生参加课程时，家长/监护人需全程陪同。",
 
@@ -295,7 +295,7 @@ const enTranslations: Record<string, string> = {
   "about.prereq3": "Curiosity and willingness to experiment",
   "about.instructors": "Instructors",
   "about.instructor1": "PhD Student in AI for Learning at Lehigh University",
-  "about.instructor2": "AI Education Researcher",
+  "about.instructor2": "AI Research Scientist",
   "about.disclaimerTitle": "Academic Research Disclaimer",
   "about.disclaimerText": "This course's teaching content and student learning data will be used for academic research in AI education. Before participating, parents/guardians must sign a data-sharing consent form. All data will be anonymized and protected in strict accordance with academic ethics standards, and used solely for research purposes to improve AI education methods. For students under 13, a parent/guardian must be present during all sessions.",
 
