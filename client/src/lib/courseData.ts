@@ -27,7 +27,7 @@ export const courses: Course[] = [
     project: "The Ultimate Fantasy/Sci-Fi World Bible",
     level: "Beginner",
     color: "cyan",
-    heroImage: "/manus-storage/course1_hero_18658186.png",
+    heroImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663394418596/UtgjfEOVRgTzembt.png",
     schoolConnection: "Creative Writing / Art",
     overview: "Ever wanted to design your own game world or fantasy universe? AI is the perfect brainstorming partner — it never says 'that's a dumb idea.' You'll learn how to use AI for divergent thinking, evaluate the quality of ideas it generates, and weave scattered sparks of inspiration into a coherent, rich world. This is where you discover that AI is a tool — and like any tool, the result depends on the person using it.",
     agenticConcept: {
@@ -52,7 +52,7 @@ export const courses: Course[] = [
     project: "Historical Mythbusters Investigation Report",
     level: "Beginner",
     color: "magenta",
-    heroImage: "/manus-storage/course2_hero_970803c8.png",
+    heroImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663394418596/FkbteIISmqAdmxKL.png",
     schoolConnection: "History / Social Studies",
     overview: "AI can summarize massive amounts of text in seconds — but it also confidently makes up 'facts.' In this project, you'll learn the most critical AI skill of all: telling the difference between when AI is telling the truth and when it's hallucinating. You'll become a digital-age detective, using AI to research while never trusting it blindly.",
     agenticConcept: {
@@ -77,7 +77,7 @@ export const courses: Course[] = [
     project: "Data Story Visualization Poster",
     level: "Beginner",
     color: "lime",
-    heroImage: "/manus-storage/course3_hero_8ceefbd1.png",
+    heroImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663394418596/kXRNzWaDziCStcWM.png",
     schoolConnection: "Math / Environmental Science",
     overview: "You don't need to be a math genius to analyze data. AI can help you clean data, spot patterns, and create charts — but YOU need to tell it what to look for and what questions to ask. The real skill of data analysis isn't calculation; it's asking the right questions. In this course, you'll also see how AI can use 'tools' — like a calculator or a chart maker — to extend its abilities beyond just text.",
     agenticConcept: {
@@ -102,7 +102,7 @@ export const courses: Course[] = [
     project: "Complete Startup Brand Kit (Logo + Poster + Pitch Deck)",
     level: "Intermediate",
     color: "amber",
-    heroImage: "/manus-storage/course4_hero_912bb3f7.png",
+    heroImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663394418596/qFONlLEsHeTfDPJQ.png",
     schoolConnection: "Business / Media Arts",
     overview: "Text is just the beginning. AI can generate images, design logos, write ad copy, and create video scripts. In this group project, you'll learn how to direct AI across multiple media types and bring all the pieces together into a unified brand. This is where you start orchestrating multiple AI capabilities in a single project — like a film director managing actors, cameras, and sets all at once.",
     agenticConcept: {
@@ -127,7 +127,7 @@ export const courses: Course[] = [
     project: "Complex Problem Decomposition Flowchart + Solution",
     level: "Intermediate",
     color: "purple",
-    heroImage: "/manus-storage/course5_hero_84fcd995.png",
+    heroImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663394418596/sPuFkMDpnFIoTYlK.png",
     schoolConnection: "Physics / Computer Science",
     overview: "AI isn't magic — it's a logic engine. It can't solve complex problems all at once, but it CAN solve each sub-problem you break down for it. This course teaches you 'computational thinking' — the art of turning big, messy problems into small, manageable pieces. Your team will tackle a challenge that seems impossible and prove it's not — one step at a time.",
     agenticConcept: {
@@ -152,7 +152,7 @@ export const courses: Course[] = [
     project: "Fully Automated Content/Research Workflow",
     level: "Advanced",
     color: "cyan",
-    heroImage: "/manus-storage/course6_hero_26d18d8f.png",
+    heroImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663394418596/DXztNJExPhFUzRAh.png",
     schoolConnection: "Journalism / Student Government",
     overview: "Why do boring, repetitive work yourself? If a task has clear steps and you do it every week, AI can automate it. Your team will learn to design workflows — chaining multiple AI steps into an automated pipeline. This is where you go from 'using AI' to 'programming AI' — not with code, but with clear instructions and logic.",
     agenticConcept: {
@@ -177,7 +177,7 @@ export const courses: Course[] = [
     project: "Functional Web App Prototype",
     level: "Advanced",
     color: "magenta",
-    heroImage: "/manus-storage/course7_hero_a6ba8736.png",
+    heroImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663394418596/yhqIvSKpqVwKrASC.png",
     schoolConnection: "Computer Science / Entrepreneurship",
     overview: "You don't need to know HTML, CSS, or JavaScript. With agentic AI, you can describe the app you want in plain language and AI will build it for you. But here's the catch: you need to be incredibly clear about what you want, test everything, and iterate when things aren't right. This course teaches you to be an AI-age 'product manager' — the person who envisions, directs, and quality-checks the final product.",
     agenticConcept: {

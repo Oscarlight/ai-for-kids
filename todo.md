@@ -31,3 +31,4 @@
 - [x] Write vitest tests for registration API
 - [x] Update summer camp dates to specific: June 14 – July 26, 2026 (7 classes)
 - [x] Improve legal consent language: add anonymization, withdrawal rights, data categories, retention
+- [x] Fix images missing on GitHub Pages: switched to absolute CDN URLs that work everywhere
