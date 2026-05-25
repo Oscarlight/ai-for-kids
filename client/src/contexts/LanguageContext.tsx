@@ -57,6 +57,7 @@ const zhTranslations: Record<string, string> = {
   "nav.journey": "学习路径",
   "nav.about": "关于",
   "nav.objectives": "学习目标",
+  "nav.register": "报名",
 
   // Hero
   "hero.badge": "14节项目制课程 · 适合13岁左右",
@@ -69,6 +70,8 @@ const zhTranslations: Record<string, string> = {
   "hero.subtitle": "从第一次AI对话到编排复杂的智能体工作流。没有讲座，没有教科书。只有真实项目、真实工具、和面向AI时代的真实技能。",
   "hero.cta1": "探索课程",
   "hero.cta2": "查看路径",
+  "hero.ctaRegister": "立即报名 — 免费",
+  "hero.freeBadge": "100% 免费 · 含Manus MAX顶级AI工具",
 
   // Stats
   "stats.classes": "课时",
@@ -141,8 +144,16 @@ const zhTranslations: Record<string, string> = {
   "about.disclaimerTitle": "学术研究声明",
   "about.disclaimerText": "本课程的教学内容和学生学习数据将用于AI教育领域的学术研究。参与课程前，学生家长/监护人需签署数据共享知情同意书。所有数据将严格按照学术伦理规范进行匿名化处理和保护，仅用于改进AI教育方法的研究目的。13岁以下学生参加课程时，家长/监护人需全程陪同。",
 
+  // CTA Section
+  "cta.free": "100% 免费课程",
+  "cta.title": "准备好开始了吗？",
+  "cta.desc": "7周线上夏令营，每周日下午2:00-3:30。名额有限，先到先得。",
+  "cta.manus": "每位学生将免费获得Manus MAX（顶级AI工具）访问权限",
+  "cta.button": "立即报名",
+
   // Footer
   "footer.tagline": "为下一代准备AI时代的核心能力。",
+  "footer.org": "Growth Mindset Education LLC",
 
   // Course page
   "course.mission": "你的任务",
@@ -201,6 +212,7 @@ const enTranslations: Record<string, string> = {
   "nav.journey": "The Journey",
   "nav.about": "About",
   "nav.objectives": "Objectives",
+  "nav.register": "Register",
 
   // Hero
   "hero.badge": "14 Project-Based Classes · Around Age 13",
@@ -213,6 +225,8 @@ const enTranslations: Record<string, string> = {
   "hero.subtitle": "A hands-on journey from your first AI conversation to orchestrating complex agentic workflows. No lectures. No textbooks. Just real projects, real tools, and real skills for the AI-powered future.",
   "hero.cta1": "Explore Courses",
   "hero.cta2": "See the Journey",
+  "hero.ctaRegister": "Register Now — It's Free",
+  "hero.freeBadge": "100% Free · Includes Manus MAX (Top-Tier AI)",
 
   // Stats
   "stats.classes": "Classes",
@@ -285,8 +299,16 @@ const enTranslations: Record<string, string> = {
   "about.disclaimerTitle": "Academic Research Disclaimer",
   "about.disclaimerText": "This course's teaching content and student learning data will be used for academic research in AI education. Before participating, parents/guardians must sign a data-sharing consent form. All data will be anonymized and protected in strict accordance with academic ethics standards, and used solely for research purposes to improve AI education methods. For students under 13, a parent/guardian must be present during all sessions.",
 
+  // CTA Section
+  "cta.free": "100% Free Course",
+  "cta.title": "Ready to Start?",
+  "cta.desc": "7-week Online Summer Camp, every Sunday 2:00-3:30 PM. Limited spots available.",
+  "cta.manus": "Every student gets free access to Manus MAX (top-tier AI) via task collaboration",
+  "cta.button": "Register Now",
+
   // Footer
   "footer.tagline": "Preparing the next generation for an AI-powered world.",
+  "footer.org": "Growth Mindset Education LLC",
 
   // Course page
   "course.mission": "Your Mission",

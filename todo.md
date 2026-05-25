@@ -1,0 +1,31 @@
+# Project TODO
+
+- [x] Basic homepage layout
+- [x] Navigation menu with bilingual support
+- [x] 7-course curriculum with Show & Share sessions
+- [x] Course detail pages
+- [x] Show & Share pages
+- [x] Dark Neon Arcade theme
+- [x] GitHub Pages deployment
+- [x] Remove "Your Learning Journey" section
+- [x] Update stats bar (remove Skill Levels, update age)
+- [x] Upgrade to full-stack with database
+- [x] Rebrand to "Growth Mindset Education LLC" (nav, footer, about section, all branding)
+- [x] Add registration page (/register) with course listing and time slots
+- [x] Show "Online Summer Camp" session: Sundays 2-3:30pm, mid-June, 7 weeks, max 10 slots
+- [x] Registration form: parent email + child age fields
+- [x] Legal mandatory opt-in checkbox for academic research data usage and public publication
+- [x] Standard privacy policy section on registration page
+- [x] Show remaining slots (X of 10 remaining)
+- [x] Add prominent "100% Free" badge and Manus MAX access messaging
+- [x] Add clear CTA on homepage linking to /register
+- [x] Admin page (/admin) - Manus OAuth protected (admin role)
+- [x] Admin: view all registrations in table
+- [x] Admin: manually add registrations
+- [x] Admin: delete registrations
+- [x] Admin: show remaining slots count
+- [x] Database schema for registrations table
+- [x] tRPC API routes for registration (create, list, delete, admin add)
+- [x] Bilingual support for registration page and privacy policy
+- [x] Admin page English-only (admin-facing internal tool)
+- [x] Write vitest tests for registration API

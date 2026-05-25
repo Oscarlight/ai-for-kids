@@ -8,17 +8,21 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import Home from "./pages/Home";
 import CoursePage from "./pages/CoursePage";
 import ShowSharePage from "./pages/ShowSharePage";
+import Register from "./pages/Register";
+import Admin from "./pages/Admin";
 
 // Detect base path from Vite's import.meta.env.BASE_URL
 const base = import.meta.env.BASE_URL || "/";
-
 function AppRouter() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <WouterRouter base={base.endsWith("/") ? base.slice(0, -1) : base}>
       <Switch>
         <Route path={"/"} component={Home} />
         <Route path={"/course/:id"} component={CoursePage} />
         <Route path={"/show-share/:id"} component={ShowSharePage} />
+        <Route path={"/register"} component={Register} />
+        <Route path={"/admin"} component={Admin} />
         <Route path={"/404"} component={NotFound} />
         <Route component={NotFound} />
       </Switch>

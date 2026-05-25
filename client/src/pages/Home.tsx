@@ -4,7 +4,7 @@ import { resolveImagePath } from "@/lib/imagePaths";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { ArrowRight, Rocket, Brain, Zap, Target, ChevronDown, Users, User, Lightbulb, MessageSquare, Workflow, Globe, Presentation, CheckCircle2, XCircle, AlertTriangle } from "lucide-react";
+import { ArrowRight, Rocket, Brain, Zap, Target, ChevronDown, Users, User, Lightbulb, MessageSquare, Workflow, Globe, Presentation, CheckCircle2, XCircle, AlertTriangle, Gift, Sparkles } from "lucide-react";
 
 const levelBadgeColors: Record<string, string> = {
   Beginner: "bg-neon-lime/15 text-neon-lime border-neon-lime/30",
@@ -57,6 +57,7 @@ export default function Home() {
               <a href="#objectives" className="hover:text-foreground transition-colors">{t("nav.objectives")}</a>
               <a href="#courses" className="hover:text-foreground transition-colors">{t("nav.courses")}</a>
               <a href="#about" className="hover:text-foreground transition-colors">{t("nav.about")}</a>
+              <Link href="/register" className="px-3 py-1.5 rounded-lg bg-neon-lime/15 text-neon-lime border border-neon-lime/30 font-semibold hover:bg-neon-lime/25 transition-all">{t("nav.register")}</Link>
             </div>
             {/* Language Switcher */}
             <div className="flex items-center gap-1 bg-secondary rounded-lg p-1">
@@ -114,19 +115,25 @@ export default function Home() {
               {t("hero.subtitle")}
             </p>
 
+            {/* Free Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neon-lime/10 border border-neon-lime/20 text-neon-lime text-sm font-medium mb-6">
+              <Gift className="w-4 h-4" />
+              {t("hero.freeBadge")}
+            </div>
+
             <div className="flex flex-wrap gap-4">
-              <a
-                href="#courses"
+              <Link
+                href="/register"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-neon-cyan text-background font-heading font-semibold text-base neon-glow-cyan hover:brightness-110 transition-all"
               >
-                {t("hero.cta1")}
+                {t("hero.ctaRegister")}
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
               <a
-                href="#objectives"
+                href="#courses"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border text-foreground font-heading font-semibold text-base hover:bg-secondary transition-all"
               >
-                {t("hero.cta2")}
+                {t("hero.cta1")}
               </a>
             </div>
           </motion.div>
@@ -455,6 +462,40 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Registration CTA Section */}
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,oklch(0.85_0.25_140/0.08),transparent_60%)]" />
+        <div className="container relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto text-center"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neon-lime/10 border border-neon-lime/20 text-neon-lime text-sm font-bold mb-6">
+              <Sparkles className="w-4 h-4" />
+              {t("cta.free")}
+            </div>
+            <h2 className="font-heading text-3xl md:text-5xl font-bold mb-4">
+              {t("cta.title")}
+            </h2>
+            <p className="text-lg text-muted-foreground mb-4">
+              {t("cta.desc")}
+            </p>
+            <p className="text-sm text-neon-cyan mb-8">
+              {t("cta.manus")}
+            </p>
+            <Link
+              href="/register"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-neon-lime text-background font-heading font-bold text-lg hover:brightness-110 transition-all shadow-[0_0_30px_oklch(0.85_0.25_140/0.3)]"
+            >
+              {t("cta.button")}
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="border-t border-border/50 py-12">
         <div className="container">
@@ -465,6 +506,9 @@ export default function Home() {
               </div>
               <span className="font-heading font-semibold text-sm">{t("nav.title")}</span>
             </div>
+            <p className="text-xs text-muted-foreground">
+              {t("footer.org")}
+            </p>
             <p className="text-sm text-muted-foreground">
               {t("footer.tagline")}
             </p>
