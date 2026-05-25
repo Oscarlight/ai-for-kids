@@ -148,7 +148,7 @@ export const courseTranslationsZh: Record<number, CourseTranslation> = {
     mission: "不写一行代码，用AI构建一个功能性应用原型。",
     project: "功能性Web应用原型",
     overview: "你不需要会HTML、CSS或JavaScript。有了智能体AI，你可以用自然语言描述你想要的应用，AI会帮你构建它。但关键是：你需要极其清楚地描述你想要什么，测试所有功能，并在不对的时候迭代改进。这门课教你成为AI时代的「产品经理」——那个构想、指导和质量把控最终产品的人。",
-    funFact: "Instagram的第一个原型只花了8周就做出来了。有了AI工具，你可以在几小时内做出一个类似复杂度的原型。速度改变了一切。",
+    funFact: "Twitter的第一个原型只花了2周就做出来了。有了AI工具，你可以在几小时内做出一个类似复杂度的原型。速度改变了一切。",
     schoolConnection: "计算机科学 / 创业",
     skillsLearned: ["需求描述", "原型思维", "用户测试", "迭代设计", "功能优先级", "技术沟通"],
     agenticConcept: {

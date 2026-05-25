@@ -192,6 +192,6 @@ export const courses: Course[] = [
       "Present your working prototype: demo the app, explain your design decisions, and share what you learned about directing AI"
     ],
     skillsLearned: ["Requirements description", "Prototype thinking", "User testing", "Iterative design", "Feature prioritization", "Technical communication"],
-    funFact: "Instagram's first prototype took 8 weeks to build. With AI tools, you can create a prototype of similar complexity in hours. Speed changes everything."
+    funFact: "Twitter's first prototype took just 2 weeks to build. With AI tools, you can create a prototype of similar complexity in hours. Speed changes everything."
   }
 ];
