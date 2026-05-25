@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE course_sessions SET startDate = 'June 14, 2026', description = 'AI for Kids Summer Camp - Learn to think with AI through 7 project-based sessions. June 14 to July 26, 2026.', descriptionZh = 'AI少年派夏令营 - 通过7个项目制课程学会与AI思考。2026年6月14日至7月26日。' WHERE id = 1;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway06.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 38cbsaG8b2A6uWE.root --database L7Yz6G4MgHwpgosVKo5F9r --execute UPDATE course_sessions SET startDate = 'June 14, 2026', description = 'AI for Kids Summer Camp - Learn to think with AI through 7 project-based sessions. June 14 to July 26, 2026.', descriptionZh = 'AI少年派夏令营 - 通过7个项目制课程学会与AI思考。2026年6月14日至7月26日。' WHERE id = 1;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 576
+}

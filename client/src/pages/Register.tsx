@@ -160,7 +160,7 @@ export default function Register() {
                           </span>
                           <span className="flex items-center gap-1.5 text-muted-foreground">
                             <Calendar className="w-4 h-4 text-neon-magenta" />
-                            {session.startDate} · {session.durationWeeks} {lang === "zh" ? "周" : "weeks"}
+                            {lang === "zh" ? `${session.startDate} – 7月26日 · ${session.durationWeeks}节课` : `${session.startDate} – July 26 · ${session.durationWeeks} classes`}
                           </span>
                         </div>
                       </div>

@@ -29,3 +29,4 @@
 - [x] Bilingual support for registration page and privacy policy
 - [x] Admin page English-only (admin-facing internal tool)
 - [x] Write vitest tests for registration API
+- [x] Update summer camp dates to specific: June 14 – July 26, 2026 (7 classes)
