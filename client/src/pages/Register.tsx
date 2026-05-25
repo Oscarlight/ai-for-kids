@@ -276,13 +276,41 @@ export default function Register() {
                       type="checkbox"
                       checked={formData.consentResearch}
                       onChange={(e) => setFormData({ ...formData, consentResearch: e.target.checked })}
-                      className="mt-1 w-5 h-5 rounded border-border accent-neon-cyan"
+                      className="mt-1 w-5 h-5 rounded border-border accent-neon-cyan shrink-0"
                     />
-                    <span className="text-sm leading-relaxed">
-                      {lang === "zh"
-                        ? "我同意本课程收集的教学数据（包括学生作品、互动记录等）可用于AI教育领域的学术研究和公开发表。所有数据将严格匿名化处理，不会泄露任何个人身份信息。"
-                        : "I consent to the teaching data collected during this course (including student work, interaction records, etc.) being used for academic research in AI education and public publication. All data will be strictly anonymized and no personally identifiable information will be disclosed."}
-                    </span>
+                    <div className="text-sm leading-relaxed space-y-2">
+                      <p className="font-medium text-foreground">
+                        {lang === "zh"
+                          ? "学术研究与发表同意书"
+                          : "Academic Research & Publication Consent"}
+                      </p>
+                      <p>
+                        {lang === "zh"
+                          ? "我（作为家长/监护人）同意我孩子在本课程中产生的以下数据可被用于学术研究和潜在的公开发表（包括教育期刊、学术会议论文集和教育研究报告）："
+                          : "I (as parent/guardian) consent to my child's following course data being used for academic research and potential publication in educational journals, conference proceedings, and educational research reports:"}
+                      </p>
+                      <ul className="list-disc list-inside text-muted-foreground space-y-1 pl-1">
+                        <li>{lang === "zh" ? "AI对话记录和提示词使用模式" : "AI conversation logs and prompting patterns"}</li>
+                        <li>{lang === "zh" ? "课程项目作品和提交内容" : "Course project outputs and submissions"}</li>
+                        <li>{lang === "zh" ? "课堂参与和互动记录" : "Class participation and interaction records"}</li>
+                        <li>{lang === "zh" ? "课后调查问卷反馈" : "Post-session survey responses"}</li>
+                      </ul>
+                      <p className="text-muted-foreground">
+                        {lang === "zh"
+                          ? "保障措施：所有数据在用于研究或发表前将进行严格的去标识化处理。任何已发表的研究成果中不会包含可识别个人身份的信息（如姓名、邮箱或具体年龄）。数据将在课程结束后保留最长3年用于研究目的，之后将被安全删除。"
+                          : "Safeguards: All data will be strictly de-identified before use in research or publication. No personally identifiable information (such as names, emails, or specific ages) will appear in any published findings. Data will be retained for up to 3 years after the course ends for research purposes, after which it will be securely deleted."}
+                      </p>
+                      <p className="text-muted-foreground">
+                        {lang === "zh"
+                          ? "数据访问仅限于Growth Mindset Education LLC的授课教师和指定研究人员。"
+                          : "Data access is limited to Growth Mindset Education LLC instructors and designated researchers only."}
+                      </p>
+                      <p className="font-medium text-neon-amber">
+                        {lang === "zh"
+                          ? "⚠️ 您可随时通过发送邮件至 growthmindset.edu@gmail.com 撤回此同意，且不会影响您孩子的课程参与资格。"
+                          : "⚠️ You may withdraw this consent at any time by emailing growthmindset.edu@gmail.com without affecting your child's enrollment or course participation."}
+                      </p>
+                    </div>
                   </label>
 
                   {/* Privacy Policy Consent */}

@@ -30,3 +30,4 @@
 - [x] Admin page English-only (admin-facing internal tool)
 - [x] Write vitest tests for registration API
 - [x] Update summer camp dates to specific: June 14 – July 26, 2026 (7 classes)
+- [x] Improve legal consent language: add anonymization, withdrawal rights, data categories, retention
