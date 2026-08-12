@@ -309,7 +309,7 @@ export default function CoursePage() {
               <span className="font-heading font-semibold text-sm">{t("nav.title")}</span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              {lang === "zh" ? `课程 ${course.id}` : `Course ${course.id}`} {t("course.of")} 7
+              {lang === "zh" ? `课程 ${course.id}` : `Course ${course.id}`} {t("course.of")} {courses.length}
             </p>
           </div>
         </div>

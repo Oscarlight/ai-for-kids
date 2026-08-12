@@ -101,7 +101,7 @@ export default function Home() {
               {t("hero.badge")}
             </div>
 
-            <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight mb-6">
+            <h1 className="font-heading max-w-full text-[clamp(2.2rem,10.5vw,3.75rem)] sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.98] tracking-[-0.04em] md:tracking-tight mb-6 break-words">
               {t("hero.title1")}
               <span className="neon-text-cyan">{t("hero.title.think")}</span>
               {t("hero.title2")}
@@ -214,7 +214,7 @@ export default function Home() {
       </section>
 
 
-      {/* Course Grid - 20 Classes */}
+      {/* Course Grid */}
       <section id="courses" className="py-24">
         <div className="container">
           <motion.div
@@ -483,7 +483,7 @@ export default function Home() {
               {t("cta.desc")}
             </p>
             <p className="text-sm text-neon-cyan mb-8">
-              {t("cta.manus")}
+              {t("cta.access")}
             </p>
             <Link
               href="/register"

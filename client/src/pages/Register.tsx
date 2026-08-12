@@ -102,15 +102,15 @@ export default function Register() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neon-lime/10 border border-neon-lime/20 text-neon-lime text-sm font-bold mb-4">
               <Gift className="w-4 h-4" />
-              {lang === "zh" ? "100% 免费 · 含Manus MAX顶级AI工具" : "100% Free · Includes Manus MAX (Top-Tier AI)"}
+              {lang === "zh" ? "100% 免费 · 含高级AI学习工具" : "100% Free · Includes Premium AI Learning Tools"}
             </div>
             <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
               {lang === "zh" ? "课程报名" : "Course Registration"}
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {lang === "zh"
-                ? "选择一个课程时段，填写信息即可完成报名。每位学生将通过任务协作免费获得Manus MAX访问权限。"
-                : "Select a session, fill in your information, and you're registered. Every student gets free Manus MAX access via task collaboration."}
+                ? "选择一个课程时段，填写信息即可完成报名。每位学生都可免费使用高级AI学习工具。"
+                : "Select a session, fill in your information, and you're registered. Every student gets free access to premium AI learning tools."}
             </p>
           </motion.div>
 
@@ -223,7 +223,7 @@ export default function Register() {
                     className="w-full px-4 py-3 rounded-xl bg-background border border-border focus:border-neon-cyan focus:outline-none focus:ring-1 focus:ring-neon-cyan/50 transition-all"
                   />
                   <p className="text-xs text-muted-foreground mt-1">
-                    {lang === "zh" ? "我们将通过此邮箱发送课程信息和Manus MAX访问链接" : "We'll send course info and Manus MAX access link to this email"}
+                    {lang === "zh" ? "我们将通过此邮箱发送课程信息和学习工具访问说明" : "We'll send course information and learning-tool access instructions to this email"}
                   </p>
                 </div>
 
@@ -428,8 +428,8 @@ export default function Register() {
                 </p>
                 <p>
                   {lang === "zh"
-                    ? "• 课程完全免费，学生将通过任务协作获得Manus MAX（顶级AI工具）的免费访问权限"
-                    : "• This course is completely free. Students get free Manus MAX (top-tier AI) access via task collaboration"}
+                    ? "• 课程完全免费，学生可免费使用高级AI学习工具"
+                    : "• This course is completely free. Students receive access to premium AI learning tools"}
                 </p>
                 <p>
                   {lang === "zh"
@@ -438,8 +438,8 @@ export default function Register() {
                 </p>
                 <p>
                   {lang === "zh"
-                    ? "• 报名成功后，我们将通过邮件发送课程详情和Manus MAX访问链接"
-                    : "• After registration, we'll email you course details and Manus MAX access link"}
+                    ? "• 报名成功后，我们将通过邮件发送课程详情和学习工具访问说明"
+                    : "• After registration, we'll email you course details and learning-tool access instructions"}
                 </p>
               </div>
             </div>

@@ -59,6 +59,27 @@ export const courseTranslationsZh: Record<number, CourseTranslation> = {
     ]
   },
   3: {
+    title: "数学魔法师",
+    subtitle: "解题、验证、讲清楚",
+    mission: "把AI当作思考伙伴，解决一道数学挑战，验证每一步，并用你自己的话讲清推理过程。",
+    project: "AI辅助证明笔记本",
+    overview: "AI可以建议解法、画出图形，或提供看待问题的新角度。但数学答案只有在你能验证并解释它为什么成立时，才真正有价值。在这门课中，你会把AI当作思考伙伴：先自己尝试，再请求提示而不是只要答案，用例子检验推理，并建立一本展示你真正理解了什么的证明笔记本。",
+    funFact: "2026年，一个AI模型为一道长期未解的几何问题带来了出人意料的思路，但数学家仍然需要核查、澄清并拓展证明。在数学中，只有能被理解和验证的推理才真正重要。",
+    schoolConnection: "数学 / 自主学习",
+    skillsLearned: ["问题表述", "请求提示", "步骤验证", "规律测试", "数学表达", "自主学习"],
+    agenticConcept: {
+      term: "推理 + 验证",
+      explanation: "高质量的AI辅助解题是一个循环：先尝试，寻求有帮助的下一步，检验想法，再解释结果。AI可以快速生成可能性，但每一步是否成立要由人来判断。验证能把看似合理的答案变成真正的学习。"
+    },
+    activityOverview: [
+      "选择一道适合自己水平的数学挑战，写下自己的第一次尝试、观察和卡住的地方",
+      "请AI给出提示、图形表示或更简单的情况——而不只是最终答案",
+      "将AI的建议与自己的尝试进行比较，用小例子、图形或已知规则验证每一步",
+      "完成AI辅助证明笔记本：原始尝试、提示、验证检查、修正和最终解答",
+      "用自己的话把方法教给同伴；如果解释中还有漏洞，就继续修改笔记本"
+    ]
+  },
+  4: {
     title: "数据侦探",
     subtitle: "让不可见的变可见",
     mission: "找到一个真实数据集，发现隐藏模式，创建一个引人注目的可视化。",
@@ -79,7 +100,7 @@ export const courseTranslationsZh: Record<number, CourseTranslation> = {
       "展示你的发现：你发现了什么？什么让你惊讶？还有哪些问题未被回答？"
     ]
   },
-  4: {
+  5: {
     title: "多模态创作者",
     subtitle: "创业路演",
     mission: "为一个虚构的创业公司创建完整的品牌和营销包。",
@@ -100,7 +121,7 @@ export const courseTranslationsZh: Record<number, CourseTranslation> = {
       "将所有内容整合成一个连贯的品牌套件，作为团队进行展示"
     ]
   },
-  5: {
+  6: {
     title: "逻辑解谜者",
     subtitle: "分解不可能",
     mission: "将一个看似不可能的复杂问题分解成AI可以解决的小块。",
@@ -121,7 +142,7 @@ export const courseTranslationsZh: Record<number, CourseTranslation> = {
       "组装总体解决方案：创建一个展示所有部分如何连接的流程图，加上书面解释"
     ]
   },
-  6: {
+  7: {
     title: "工作流构建者",
     subtitle: "自动化无聊的事",
     mission: "识别一个重复性任务，设计并构建一个自动化工作流来完成它。",
@@ -142,7 +163,7 @@ export const courseTranslationsZh: Record<number, CourseTranslation> = {
       "记录你的工作流，让其他人也能使用——清晰的说明、预期输入/输出和故障排除提示"
     ]
   },
-  7: {
+  8: {
     title: "应用构建者",
     subtitle: "用AI做原型",
     mission: "不写一行代码，用AI构建一个功能性应用原型。",

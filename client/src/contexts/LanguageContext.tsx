@@ -60,7 +60,7 @@ const zhTranslations: Record<string, string> = {
   "nav.register": "报名",
 
   // Hero
-  "hero.badge": "14节项目制课程 · 适合13岁左右",
+  "hero.badge": "16节项目制课程 · 适合13岁左右",
   "hero.title1": "学会与AI",
   "hero.title.think": "思考",
   "hero.title2": "，",
@@ -71,15 +71,15 @@ const zhTranslations: Record<string, string> = {
   "hero.cta1": "探索课程",
   "hero.cta2": "查看路径",
   "hero.ctaRegister": "立即报名 — 免费",
-  "hero.freeBadge": "100% 免费 · 含Manus MAX顶级AI工具",
+  "hero.freeBadge": "100% 免费 · 含高级AI学习工具",
 
   // Stats
   "stats.classes": "课时",
-  "stats.classesValue": "14",
+  "stats.classesValue": "16",
   "stats.levels": "难度等级",
   "stats.levelsValue": "3",
   "stats.projects": "实战项目",
-  "stats.projectsValue": "7",
+  "stats.projectsValue": "8",
   "stats.skills": "AI技能",
   "stats.skillsValue": "40+",
 
@@ -115,8 +115,8 @@ const zhTranslations: Record<string, string> = {
   "journey.group": "小组项目",
 
   // Course grid
-  "courses.title": "全部14节课",
-  "courses.subtitle": "7个项目课 + 7个展示与分享课。每个项目课后都有一节专门的展示课，巩固理解、锻炼表达。",
+  "courses.title": "全部16节课",
+  "courses.subtitle": "8个项目课 + 8个展示与分享课。每个项目课后都有一节专门的展示课，巩固理解、锻炼表达。",
   "courses.startMission": "开始任务",
   "courses.showShare": "展示与分享",
 
@@ -136,7 +136,7 @@ const zhTranslations: Record<string, string> = {
   "about.not3": "不是背诵AI术语",
   "about.prereqTitle": "前置要求",
   "about.prereq1": "基本电脑操作 + 打字能力",
-  "about.prereq2": "一个AI订阅账号（如Manus）",
+  "about.prereq2": "可使用合适AI学习工具的账号",
   "about.prereq3": "好奇心和实验精神",
   "about.instructors": "课程导师",
   "about.instructor1": "里海大学 AI教育方向 博士研究生",
@@ -147,8 +147,8 @@ const zhTranslations: Record<string, string> = {
   // CTA Section
   "cta.free": "100% 免费课程",
   "cta.title": "准备好开始了吗？",
-  "cta.desc": "7周线上夏令营，每周日下午2:00-3:30。名额有限，先到先得。",
-  "cta.manus": "每位学生将免费获得Manus MAX（顶级AI工具）访问权限",
+  "cta.desc": "8周线上夏令营，每周日下午2:00-3:30。名额有限，先到先得。",
+  "cta.access": "每位学生都可免费使用高级AI学习工具",
   "cta.button": "立即报名",
 
   // Footer
@@ -215,7 +215,7 @@ const enTranslations: Record<string, string> = {
   "nav.register": "Register",
 
   // Hero
-  "hero.badge": "14 Project-Based Classes · Around Age 13",
+  "hero.badge": "16 Project-Based Classes · Around Age 13",
   "hero.title1": "Learn to ",
   "hero.title.think": "Think",
   "hero.title2": " with AI,",
@@ -226,15 +226,15 @@ const enTranslations: Record<string, string> = {
   "hero.cta1": "Explore Courses",
   "hero.cta2": "See the Journey",
   "hero.ctaRegister": "Register Now — It's Free",
-  "hero.freeBadge": "100% Free · Includes Manus MAX (Top-Tier AI)",
+  "hero.freeBadge": "100% Free · Includes Premium AI Learning Tools",
 
   // Stats
   "stats.classes": "Classes",
-  "stats.classesValue": "14",
+  "stats.classesValue": "16",
   "stats.levels": "Skill Levels",
   "stats.levelsValue": "3",
   "stats.projects": "Real Projects",
-  "stats.projectsValue": "7",
+  "stats.projectsValue": "8",
   "stats.skills": "AI Skills",
   "stats.skillsValue": "40+",
 
@@ -270,8 +270,8 @@ const enTranslations: Record<string, string> = {
   "journey.group": "Group Project",
 
   // Course grid
-  "courses.title": "All 14 Classes",
-  "courses.subtitle": "7 project classes + 7 Show & Share classes. Each project is followed by a dedicated presentation session to solidify understanding and practice communication.",
+  "courses.title": "All 16 Classes",
+  "courses.subtitle": "8 project classes + 8 Show & Share classes. Each project is followed by a dedicated presentation session to solidify understanding and practice communication.",
   "courses.startMission": "Start Mission",
   "courses.showShare": "Show & Share",
 
@@ -291,7 +291,7 @@ const enTranslations: Record<string, string> = {
   "about.not3": "Not about memorizing AI terminology",
   "about.prereqTitle": "Prerequisites",
   "about.prereq1": "Basic computer skills + typing",
-  "about.prereq2": "A premium AI subscription (e.g., Manus)",
+  "about.prereq2": "An account with access to suitable AI learning tools",
   "about.prereq3": "Curiosity and willingness to experiment",
   "about.instructors": "Instructors",
   "about.instructor1": "PhD Student in AI for Learning at Lehigh University",
@@ -302,8 +302,8 @@ const enTranslations: Record<string, string> = {
   // CTA Section
   "cta.free": "100% Free Course",
   "cta.title": "Ready to Start?",
-  "cta.desc": "7-week Online Summer Camp, every Sunday 2:00-3:30 PM. Limited spots available.",
-  "cta.manus": "Every student gets free access to Manus MAX (top-tier AI) via task collaboration",
+  "cta.desc": "8-week Online Summer Camp, every Sunday 2:00-3:30 PM. Limited spots available.",
+  "cta.access": "Every student gets free access to premium AI learning tools",
   "cta.button": "Register Now",
 
   // Footer

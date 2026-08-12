@@ -96,6 +96,49 @@ export const showShareSessions: ShowShareSession[] = [
   {
     courseId: 3,
     format: {
+      zh: "进行一次2分钟的「数学思路讲解」：展示你的原始尝试、你向AI请求的提示、你如何检查每一步，以及你现在能用自己的话说出的解法。",
+      en: "Give a 2-minute 'math thinking walkthrough': show your original attempt, the hint you requested from AI, how you checked each step, and the solution you can now explain in your own words."
+    },
+    discussionPoints: {
+      zh: [
+        "为什么请求提示或图示，往往比直接索要答案更能帮助你学习？",
+        "你用什么小例子、图形或规则来验证AI建议的步骤？",
+        "AI给出的解题思路和你自己的思路有什么相同或不同？"
+      ],
+      en: [
+        "Why can asking for a hint or diagram help you learn more than asking for the answer?",
+        "What small examples, drawings, or rules did you use to verify AI's suggested steps?",
+        "How was AI's approach similar to or different from your own?"
+      ]
+    },
+    reflectionQuestions: {
+      zh: [
+        "你在哪一步最需要自己做判断，而不是接受AI的建议？",
+        "如果AI给出看似合理但错误的步骤，你会怎样发现它？",
+        "下次遇到难题时，你会如何先自己尝试，再向AI求助？"
+      ],
+      en: [
+        "At which step did you most need your own judgment instead of accepting AI's suggestion?",
+        "How would you notice if AI offered a step that sounded plausible but was wrong?",
+        "When you meet a hard problem next time, how will you try first and then ask AI for help?"
+      ]
+    },
+    peerReviewCriteria: {
+      zh: [
+        "是否清楚展示了原始尝试、AI提示和验证过程？",
+        "每一步是否有可理解的理由或检查方法？",
+        "讲解是否体现了学生自己的理解，而不是只复述AI答案？"
+      ],
+      en: [
+        "Does it clearly show the original attempt, AI hint, and verification process?",
+        "Does each step have an understandable reason or check?",
+        "Does the explanation demonstrate the student's own understanding rather than repeating an AI answer?"
+      ]
+    }
+  },
+  {
+    courseId: 4,
+    format: {
       zh: "展示你的数据可视化作品（2分钟）：解释数据来源、你问了AI什么问题、以及你发现的最令人惊讶的洞察。展示AI是如何使用「工具」（代码/图表）来帮你分析的。",
       en: "Present your data visualization (2 min): explain data sources, what questions you asked AI, and the most surprising insight you discovered. Show how AI used 'tools' (code/charts) to help your analysis."
     },
@@ -137,7 +180,7 @@ export const showShareSessions: ShowShareSession[] = [
     }
   },
   {
-    courseId: 4,
+    courseId: 5,
     format: {
       zh: "小组「创业路演」（5分钟）：像真正的创业者一样展示你们的产品概念、品牌设计、营销材料。评委（其他同学）可以提问。重点展示AI在创意过程中的角色以及团队如何协调多个AI工具。",
       en: "Group 'startup pitch' (5 min): Present your product concept, brand design, and marketing materials like real entrepreneurs. Judges (classmates) can ask questions. Focus on AI's role in the creative process and how your team coordinated multiple AI tools."
@@ -180,7 +223,7 @@ export const showShareSessions: ShowShareSession[] = [
     }
   },
   {
-    courseId: 5,
+    courseId: 6,
     format: {
       zh: "小组「解题秀」（4分钟）：展示你们如何将一个复杂问题分解成AI可以处理的子任务，每个子任务的结果，以及你们如何整合最终答案。用流程图展示你们的思维过程。",
       en: "Group 'problem-solving show' (4 min): Show how you decomposed a complex problem into AI-manageable subtasks, results of each subtask, and how you integrated the final answer. Use a flowchart to show your thinking process."
@@ -223,7 +266,7 @@ export const showShareSessions: ShowShareSession[] = [
     }
   },
   {
-    courseId: 6,
+    courseId: 7,
     format: {
       zh: "小组「效率革命」展示（4分钟）：展示你们自动化的工作流——之前需要多少时间/步骤，现在需要多少。现场运行一次工作流，展示从输入到输出的全过程。",
       en: "Group 'efficiency revolution' show (4 min): Present your automated workflow — how much time/steps it took before vs now. Run the workflow live, showing the full input-to-output process."
@@ -266,7 +309,7 @@ export const showShareSessions: ShowShareSession[] = [
     }
   },
   {
-    courseId: 7,
+    courseId: 8,
     format: {
       zh: "小组「产品发布会」（6分钟）：像科技公司一样发布你们的应用原型。展示用户问题、解决方案、功能演示。每个组员负责一个环节。解释完整的AI智能体循环如何帮你们从想法到原型。",
       en: "Group 'product launch' (6 min): Launch your app prototype like a tech company. Show the user problem, solution, and feature demo. Each member owns one section. Explain how the full agentic AI loop helped you go from idea to prototype."
@@ -286,12 +329,12 @@ export const showShareSessions: ShowShareSession[] = [
     reflectionQuestions: {
       zh: [
         "从「想法」到「可用原型」，最难的一步是什么？",
-        "回顾整个7门课的学习旅程，你最大的成长是什么？",
+        "回顾整个8门课的学习旅程，你最大的成长是什么？",
         "你现在如何定义「AI时代的核心能力」？"
       ],
       en: [
         "From 'idea' to 'working prototype,' what was the hardest step?",
-        "Looking back at the entire 7-course journey, what was your biggest growth?",
+        "Looking back at the entire 8-course journey, what was your biggest growth?",
         "How do you now define 'core competencies in the AI age'?"
       ]
     },

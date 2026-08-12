@@ -71,6 +71,31 @@ export const courses: Course[] = [
   },
   {
     id: 3,
+    title: "The Math Wizard",
+    subtitle: "Solve, Check, Explain",
+    mission: "Use AI as a thinking partner to solve a math challenge, verify every step, and explain the reasoning in your own words.",
+    project: "AI-Assisted Proof Notebook",
+    level: "Beginner",
+    color: "lime",
+    heroImage: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663277276996/cjzahDofUHGyJvPn.png",
+    schoolConnection: "Mathematics / Self-Directed Learning",
+    overview: "AI can suggest a method, draw a diagram, or show a different way to see a problem. But a mathematical answer only becomes useful when you can check it and explain why it works. In this course, you will treat AI as a thinking partner: try first, ask for a hint rather than just an answer, test the reasoning with examples, and build a proof notebook that shows what YOU understand.",
+    agenticConcept: {
+      term: "Reasoning + Verification",
+      explanation: "A strong AI-assisted solution is a cycle: make an attempt, ask for a helpful next step, test the idea, and explain the result. AI can generate possibilities quickly, but people must decide whether each step is valid. Verification turns a plausible answer into real learning."
+    },
+    activityOverview: [
+      "Choose an age-appropriate math challenge and write your own first attempt, observations, and the exact point where you get stuck",
+      "Ask AI for a hint, a visual representation, or a simpler case — not only the final answer",
+      "Compare the AI suggestion with your attempt and test every step using small examples, diagrams, or rules you already know",
+      "Record the reasoning in an AI-Assisted Proof Notebook: original attempt, hint, verification check, correction, and final solution",
+      "Teach the method to a partner in your own words and revise the notebook if your explanation leaves a gap"
+    ],
+    skillsLearned: ["Problem framing", "Hint-seeking", "Step verification", "Pattern testing", "Mathematical explanation", "Self-directed learning"],
+    funFact: "In 2026, an AI model contributed a surprising approach to a long-standing geometry problem, but human mathematicians still checked, clarified, and extended the proof. In mathematics, a result matters when the reasoning can be understood and verified."
+  },
+  {
+    id: 4,
     title: "The Data Detective",
     subtitle: "Visualizing the Invisible",
     mission: "Find a real dataset, discover hidden patterns, and create a compelling visualization.",
@@ -95,7 +120,7 @@ export const courses: Course[] = [
     funFact: "Netflix uses data analysis to decide what shows to make. House of Cards was produced because data showed users loved Kevin Spacey + political drama + David Fincher as a combination."
   },
   {
-    id: 4,
+    id: 5,
     title: "The Multimodal Creator",
     subtitle: "The Startup Pitch",
     mission: "Create a complete brand and marketing package for a fictional startup.",
@@ -120,7 +145,7 @@ export const courses: Course[] = [
     funFact: "Coca-Cola used AI to generate a Christmas ad in 2023, sparking huge debate. Some people thought it was cool, others felt it lacked soul. What do you think — can AI-generated art have emotion?"
   },
   {
-    id: 5,
+    id: 6,
     title: "The Logic Puzzle",
     subtitle: "Breaking Down the Impossible",
     mission: "Take a seemingly impossible complex problem and break it into pieces AI can solve.",
@@ -145,7 +170,7 @@ export const courses: Course[] = [
     funFact: "Google's interview question 'How would you move Mount Fuji?' isn't about actually moving a mountain — it tests whether you can break an absurd problem into manageable steps. That's exactly the skill you're learning here."
   },
   {
-    id: 6,
+    id: 7,
     title: "The Workflow Builder",
     subtitle: "Automating the Mundane",
     mission: "Identify a repetitive task and design an automated workflow to handle it.",
@@ -170,7 +195,7 @@ export const courses: Course[] = [
     funFact: "McKinsey estimates that 30% of work activities in 60% of jobs can be automated. People who learn to design workflows won't be replaced — they'll be the ones designing the automation."
   },
   {
-    id: 7,
+    id: 8,
     title: "The App Builder",
     subtitle: "Prototyping with AI",
     mission: "Build a functional app prototype without writing a single line of code yourself.",
