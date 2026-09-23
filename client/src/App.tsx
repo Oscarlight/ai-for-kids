@@ -10,6 +10,7 @@ import CoursePage from "./pages/CoursePage";
 import ShowSharePage from "./pages/ShowSharePage";
 import Register from "./pages/Register";
 import Admin from "./pages/Admin";
+import ThinkWithAI from "./pages/ThinkWithAI";
 
 // Detect base path from Vite's import.meta.env.BASE_URL
 const base = import.meta.env.BASE_URL || "/";
@@ -23,6 +24,7 @@ function AppRouter() {
         <Route path={"/show-share/:id"} component={ShowSharePage} />
         <Route path={"/register"} component={Register} />
         <Route path={"/admin"} component={Admin} />
+        <Route path={"/think-with-ai"} component={ThinkWithAI} />
         <Route path={"/404"} component={NotFound} />
         <Route component={NotFound} />
       </Switch>
