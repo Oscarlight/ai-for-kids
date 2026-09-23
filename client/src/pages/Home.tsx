@@ -57,6 +57,7 @@ export default function Home() {
               <a href="#objectives" className="hover:text-foreground transition-colors">{t("nav.objectives")}</a>
               <a href="#courses" className="hover:text-foreground transition-colors">{t("nav.courses")}</a>
               <a href="#about" className="hover:text-foreground transition-colors">{t("nav.about")}</a>
+              <Link href="/think-with-ai" className="hover:text-neon-cyan transition-colors">Think with AI</Link>
               <Link href="/register" className="px-3 py-1.5 rounded-lg bg-neon-lime/15 text-neon-lime border border-neon-lime/30 font-semibold hover:bg-neon-lime/25 transition-all">{t("nav.register")}</Link>
             </div>
             {/* Language Switcher */}
